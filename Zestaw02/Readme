@@ -1,0 +1,66 @@
+# MATEUSZ KAŁWA #
+
+Odpowiedzi na pytania:
+    @ Opisz trzy sposoby obsługi cykliczności bufora:
+        - if (tail > max_size)
+            tail = 0
+          Jest to mało optymalny sposob poniewaz wykorzystywany
+          jest warunek if
+        - tail = tail % max_size
+          Jest to bardziej optymalny sposob niz poprzedni poniewaz
+          nie wykorzystuje warunku if ale tez nie jest bardzo optymalny
+          poniewaz w obliczaniu modulo wykorzystywane jest dzielenie
+          ktore nie dziala wybitnie szybko
+
+    
+    @ Omów przykłady zastosowania kolejki:
+        - Algorytmy sortowania: Niektóre algorytmy sortowania, 
+          takie jak Mergesort lub Radix, wykorzystują kolejki
+          do tymczasowego przechowywania danych podczas sortowania.
+        - Obsługa zapytań w serwerach internetowych: Kolejka może
+          być używana do obsługi zapytań od klientów w serwerach 
+          internetowych. Zapytania są kolejkowane i przetwarzane 
+          w kolejności, w jakiej zostały odebrane.
+    
+    @ Co oznaczają akronimy LIFO i FIFO?:
+        - LIFO: Oznacza "Last in First Out", co tlumaczac na polski
+          jezyk oznacza "ostatni w srodku pierwszy na zewnatrz" i 
+          przeklada sie to na typowa sytuacje w momencie, w ktorej
+          ukladamy cos na stosie. Kladziemy na wierzch i jezeli
+          chcemy cos zabrac to tez bierzemy z wierzchu.
+        - FIFO: Oznacza "First In First Out", co tlumaczac na polski
+          jezyk oznaczna "pierwszy w srodku pierwszy na zewnatrz" i 
+          przeklada sie to na typowa sytuacje kolejki. Kto pierwszy
+          stanal do kolejki np. do kasy ten pierwszy moze zostac
+          obsluzony.
+
+
+Kompilowanie:
+    @ Kompilacja programu Queue.cpp:
+        - make Queue.x
+
+    @ Kompilacja programu Generator.cpp:
+        - make Generator.x
+
+    @ Kompilacja programu Radix.cpp:
+        - make Radix.x
+
+    @ Kompilacja wszystkich programów:
+        - make all
+
+
+Uruchamianie po kompilacji:
+    @ Uruchamianie program Queue.x:
+        - ./Queue.x
+
+    @ Uruchamianie program Generator.x:
+        - ./Generator.x 10
+
+    @ Uruchamianie program Generator.x i zapisanie wyników do pliku txt:
+        - ./Generator.x 10 > wynik.txt
+
+    @ Uruchamianie program Queue.x wraz z Generator:
+        - ./Generator.x 10 | ./Queue.x
+
+    @ Uruchamianie program Radix.x:
+        - ./Radix.x

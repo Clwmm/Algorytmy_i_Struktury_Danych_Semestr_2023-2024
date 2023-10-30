@@ -1,0 +1,62 @@
+# MATEUSZ KAŁWA #
+
+Odpowiedzi na pytania:
+    @ Co to jest stos:
+        - Stos to struktura danych w której dane wkładane są na
+          wierzch stosu i z góry są pobierane (LIFO, Last In, First Out)
+    
+    @ Omów przykłady zastosowania stosu:
+        - Wyrażenia matematyczne (odwrotna notacja polska, ONP): 
+          Liczby i operatory są dodawane i usuwane z stosu,
+          aby obliczyć wynik.
+        - Zarządzanie pamięcią w systemach operacyjnych: Systemy
+          operacyjne używają stosu do zarządzania lokalnymi
+          zmiennymi i kontekstem wywołań funkcji w procesach.
+    
+    @ Dlaczego operacja pop() z std::stack nie zwraca wartości elementu:
+        -  Bezpieczeństwo i spójność danych: Stos w oparciu o LIFO 
+           zasada usuwa element z wierzchołka stosu, ponieważ jest to
+           najłatwiejszy i najbardziej naturalny sposób korzystania ze stosu.
+           Usunięcie elementu z wierzchołka nie zakłóca spójności danych na
+           stosie, ponieważ element ten jest najmłodszy i ostatnio dodany.
+
+    @ Dlaczego operacja pop() z std::stack nie zwraca referencji do elementu:
+        - Funkcja pop() nie zwraca referencji do elementu, ponieważ implementacja
+          operacji pop() zakłada, że użytkownik nie potrzebuje dostępu do elementu
+          przed jego usunięciem.
+    
+    @ Do czego służy funkcja std::queue::emplace:
+        - Funkcja std::queue::emplace służy do bezpośredniego wstawiania nowego
+        elementu do kolejki (std::queue) bez konieczności tworzenia osobnego
+        obiektu i kopiowania jego wartości
+
+
+Kompilowanie:
+    @ Kompilacja programu Stack.cpp:
+        - make Stack.x
+
+    @ Kompilacja programu Generator.cpp:
+        - make Generator.x
+
+    @ Kompilacja programu ONP.cpp:
+        - make ONP.x
+
+    @ Kompilacja wszystkich programów:
+        - make all
+
+
+Uruchamianie po kompilacji:
+    @ Uruchamianie program Stack.x:
+        - ./Stack.x
+
+    @ Uruchamianie program Generator.x:
+        - ./Generator.x 10
+
+    @ Uruchamianie program Generator.x i zapisanie wyników do pliku txt:
+        - ./Generator.x 10 > wynik.txt
+
+    @ Uruchamianie program Stack.x wraz z Generator:
+        - ./Generator.x 10 | ./Stack.x
+
+    @ Uruchamianie program ONP.x:
+        - ./ONP.x

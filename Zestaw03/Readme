@@ -1,0 +1,47 @@
+# MATEUSZ KAŁWA #
+
+Odpowiedzi na pytania:
+    @ Jakie są zalety implementacji wskaźnikowej, a jakie implementacji tablicowej:
+        - Implementacja wskaźnikowa daje nam możliwość dynamiczengo alokowania
+          pamieci, co za tym idzie nie mamy z góry nałożonego rozmiaru struktury
+          danych. Ale też trzeba pamiętać o zwalnianiu zaalokowanej pamięci
+          aby nie było wycieków. A implementacja tablicowa umożliwia nam szybsze
+          odczyty naszych danych z pamieci, ponieważ dane w naszej strukturze nie
+          są porozrzucane w różnych komórkach pamięci, tylko są ściśle ułożone obok
+          siebie. Lecz niestety w momencie przekroczenia założonej wielkości albo
+          nie możemy dorzucać nic więcej albo jest zaimplementowana metoda powiększenia
+          pamięci przerzucenia danych i usunięcia starej, jak to jest zrobione np w
+          std::vector, lecz to zajmuję trochę czasu.
+
+    
+    @ Zastanowić się jak zaimplementować listę dwukierunkową zapamiętując tylko jeden wskaźnik:
+        - Aby zaimplementować listę dwukierunkową przy użyciu jednego wskaźnika na
+          element listy, można wykorzystać technikę zwana XOR Linked List 
+          (Exclusive OR Linked List). Technika ta polega na wykorzystaniu operacji
+          XOR, aby zapisać wskaźniki na poprzedni i następny element w jednym
+          wskaźniku.
+
+
+Kompilowanie:
+    @ Kompilacja programu LinkedList.cpp:
+        - make LinkedList.x
+
+    @ Kompilacja programu Generator.cpp:
+        - make Generator.x
+
+    @ Kompilacja wszystkich programów:
+        - make all
+
+
+Uruchamianie po kompilacji:
+    @ Uruchamianie program LinkedList.x:
+        - ./LinkedList.x
+
+    @ Uruchamianie program Generator.x:
+        - ./Generator.x 10
+
+    @ Uruchamianie program Generator.x i zapisanie wyników do pliku txt:
+        - ./Generator.x 10 > wynik.txt
+
+    @ Uruchamianie program LinkedList.x wraz z Generator:
+        - ./Generator.x 10 | ./LinkedList.x

@@ -1,0 +1,40 @@
+# MATEUSZ KAŁWA #
+
+Odpowiedzi na pytania:
+    @ Jakie są zalety implementacji wskaźnikowej, a jakie implementacji tablicowej:
+        - Implementacja wskaźnikowa daje nam możliwość dynamiczengo alokowania
+          pamieci, co za tym idzie nie mamy z góry nałożonego rozmiaru struktury
+          danych. Ale też trzeba pamiętać o zwalnianiu zaalokowanej pamięci
+          aby nie było wycieków. A implementacja tablicowa umożliwia nam szybsze
+          odczyty naszych danych z pamieci, ponieważ dane w naszej strukturze nie
+          są porozrzucane w różnych komórkach pamięci, tylko są ściśle ułożone obok
+          siebie. Lecz niestety w momencie przekroczenia założonej wielkości albo
+          nie możemy dorzucać nic więcej albo jest zaimplementowana metoda powiększenia
+          pamięci przerzucenia danych i usunięcia starej, jak to jest zrobione np w
+          std::vector, lecz to zajmuję trochę czasu.
+
+    
+    @ Jakie są zalety implementacji kursorowej:
+        - Kursorowa lista w oferuje efektywne operacje wstawiania i usuwania elementów
+        oraz elastyczność w modyfikowaniu struktury danych. Mimo to, może być mniej
+        wydajna przy dostępie do konkretnych indeksów i wymaga bardziej zaawansowanych
+        operacji niż tradycyjne tablice.
+
+
+Kompilowanie:
+    @ Kompilacja programu CursorList.cpp:
+        - make CursorList.x
+
+    @ Kompilacja programu ArrayList.cpp:
+        - make ArrayList.x
+
+    @ Kompilacja wszystkich programów:
+        - make all
+
+
+Uruchamianie po kompilacji:
+    @ Uruchamianie program CursorList.x:
+        - ./CursorList.x
+
+    @ Uruchamianie program ArrayList.x:
+        - ./ArrayList.x

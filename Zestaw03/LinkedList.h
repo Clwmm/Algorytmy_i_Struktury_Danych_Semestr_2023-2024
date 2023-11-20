@@ -8,10 +8,9 @@
 template<class T>
 class LinkedList {
     struct Node {
-        Node(T& val = 0, Node* left = nullptr, Node* right = nullptr)
-            : val(val), prev(left), next(right) {}
-        Node(T&& val = 0, Node* left = nullptr, Node* right = nullptr)
-            : val(val), prev(left), next(right) {}
+        template <class U>
+        Node(U&& val = 0, Node* left = nullptr, Node* right = nullptr)
+            : val(std::forward<U>(val)), prev(left), next(right) {}
         T val;
         Node* prev;
         Node* next;

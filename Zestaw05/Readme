@@ -1,0 +1,28 @@
+# MATEUSZ KAŁWA #
+
+Kompilowanie:
+    @ Kompilacja wszystkich programów:
+        - make all
+
+
+Uruchamianie po kompilacji:
+    @ Uruchamianie program BubbleSort.x:
+        - make BubbleSort
+
+    @ Uruchamianie program SelectionSort.x:
+        - make SelectionSort
+    
+    @ Uruchamianie program InsertionSort.x:
+        - make InsertionSort
+
+    @ Aby stworzyć wykres na początku trzeba włączyć program time.x,
+    który stworzy pliki danych z czasem potrzebnym programowi oraz liczbą
+    elementów w tablicy do posortowania
+
+    @ Uruchamianie program time.x:
+        - make time
+    
+    @ Następnie potrzeba włączyć program do tworzenia wykresu gnuplot.x
+
+    @ Uruchamianie program gnuplot.x:
+        - make Plot

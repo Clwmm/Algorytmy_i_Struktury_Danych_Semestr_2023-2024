@@ -1,0 +1,18 @@
+# MATEUSZ KAŁWA #
+
+Odpowiedzi na pytania:
+    @ Są zawartę w pliku ASD06.pdf
+
+Kompilowanie:
+    @ Kompilacja programu BinaryTree.cpp:
+        - make BinaryTree.x
+
+    @ Kompilacja wszystkich programów:
+        - make all
+
+
+Uruchamianie po kompilacji:
+    @ Uruchamianie program CursorList.x:
+        - ./BinaryTree.x
+        # OR
+        - make run

@@ -57,7 +57,8 @@ private:
 			this->insert_left(node->left, node, std::forward<U>(x));
 	}
 
-	node_ptr searchRecursive_(node_ptr node, const T& x)
+	node_ptr searchRecursive_(node_ptr node, cons
+	 T& x)
 	{
 		if (node == nullptr || node->value == x)
 			return node;
@@ -128,6 +129,11 @@ private:
 	}
 
 public:
+
+	~BinaryTree()
+	{
+		clear(root);
+	}
 
 	struct Iterator
 	{
@@ -246,6 +252,17 @@ public:
 	{
 		this->postorder_(root);
 		std::cout << std::endl;
+	}
+
+	void clear(node_ptr node)
+	{
+		if (node != nullptr)
+		{
+			clear(node->left);
+			clear(node->right);
+			delete node;
+			node = nullptr;
+		}
 	}
 
 	Iterator begin() { return Iterator(this->root); }
